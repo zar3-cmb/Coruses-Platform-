@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الدفع - الكورسات</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/magic.css/dist/magic.css">
+    <link rel="stylesheet" href="resat.css">
+    <link rel="stylesheet" href="bad1.css">
+</head>
+<body>
+    <div class="payment-container">
+        <button id="darkModeBtn" class="dark-mode-btn" title="تبديل الوضع الليلي">🌙</button>
+        <header class="payment-header">
+            <h1>💳 صفحة الدفع والاشتراك</h1>
+            <p>اختر الكورس المناسب وأكمل عملية الدفع</p>
+        </header>
+
+        <div class="payment-wrapper">
+            <!-- Course Selection -->
+            <section class="courses-section">
+                <h2>اختر الكورس</h2>
+                <div class="courses-list">
+                    <div class="course-item" data-price="50" data-name="HTML & CSS للمبتدئين">
+                        <div class="course-header">
+                            <h3>HTML & CSS للمبتدئين</h3>
+                            <span class="price">$50</span>
+                        </div>
+                        <p class="course-desc">تعلم أساسيات بناء صفحات ويب احترافية</p>
+                        <ul class="course-features">
+                            <li>✓ 8 ساعات فيديو</li>
+                            <li>✓ 20 تمرين عملي</li>
+                            <li>✓ شهادة إتمام</li>
+                        </ul>
+                        <button class="select-course">اختر هذا الكورس</button>
+                    </div>
+
+                    <div class="course-item" data-price="70" data-name="JavaScript المتقدم">
+                        <div class="course-header">
+                            <h3>JavaScript المتقدم</h3>
+                            <span class="price">$70</span>
+                        </div>
+                        <p class="course-desc">إتقان لغة JavaScript والبرمجة الحقيقية</p>
+                        <ul class="course-features">
+                            <li>✓ 12 ساعة فيديو</li>
+                            <li>✓ مشروع كامل</li>
+                            <li>✓ شهادة معتمدة</li>
+                        </ul>
+                        <button class="select-course">اختر هذا الكورس</button>
+                    </div>
+
+                    <div class="course-item" data-price="90" data-name="React للمحترفين">
+                        <div class="course-header">
+                            <h3>React للمحترفين</h3>
+                            <span class="price">$90</span>
+                        </div>
+                        <p class="course-desc">بناء تطبيقات ويب متقدمة مع React</p>
+                        <ul class="course-features">
+                            <li>✓ 15 ساعة فيديو</li>
+                            <li>✓ مشاريع متعددة</li>
+                            <li>✓ دعم مباشر</li>
+                        </ul>
+                        <button class="select-course">اختر هذا الكورس</button>
+                    </div>
+
+                    <div class="course-item" data-price="120" data-name="الباقة الشاملة">
+                        <div class="course-header">
+                            <h3>🎁 الباقة الشاملة</h3>
+                            <span class="price">$120</span>
+                            <span class="badge">محفوظة</span>
+                        </div>
+                        <p class="course-desc">جميع الكورسات الثلاثة مع دعم كامل</p>
+                        <ul class="course-features">
+                            <li>✓ كل الكورسات</li>
+                            <li>✓ دعم مدى الحياة</li>
+                            <li>✓ تحديثات مجانية</li>
+                        </ul>
+                        <button class="select-course">اختر هذا الكورس</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment Form -->
+            <section class="payment-form-section">
+                <h2>تفاصيل الدفع</h2>
+                <form id="paymentForm" class="payment-form">
+                    <div class="form-group">
+                        <label>الكورس المختار</label>
+                        <input id="selectedCourse" type="text" placeholder="اختر كورس أولاً" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>السعر</label>
+                        <div class="price-display">
+                            <span id="displayPrice">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل *</label>
+                        <input id="fullName" type="text" placeholder="محمد أحمد" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني *</label>
+                        <input id="email" type="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input id="phone" type="tel" placeholder="+966 50 1234567" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cardNumber">رقم البطاقة *</label>
+                            <input id="cardNumber" type="text" placeholder="1234 5678 9101 1121" maxlength="19" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardExpiry">التاريخ (MM/YY) *</label>
+                            <input id="cardExpiry" type="text" placeholder="12/25" maxlength="5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardCVC">CVC *</label>
+                            <input id="cardCVC" type="text" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full">
+                        <label>
+                            <input id="agreeTerms" type="checkbox" required>
+                            أوافق على الشروط والأحكام
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-pay">إتمام الدفع</button>
+                </form>
+
+                <div class="login-link-section">
+                    <p>لديّ حساب بالفعل؟</p>
+                    <a href="bad2.html" class="btn-login">اذهب إلى تسجيل الدخول</a>
+                </div>
+            </section>
+        </div>
+
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="bad1.js"></script>
+</body>
+</html>

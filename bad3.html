@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>منصة الكورسات — الكورسات</title>
+  <link rel="stylesheet" href="bad3.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">منصة الكورسات</div>
+      <nav class="nav">
+        <a href="bad2.html">تسجيل الدخول</a>
+        <a href="#courses">الكورسات</a>
+        <a href="#about">من نحن</a>
+        <button id="darkModeToggle" class="dark-mode-btn" title="تبديل الوضع الليلي">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>تعلم مهارات جديدة بطريقة احترافية</h1>
+        <p class="lead">دورات مهنية قصيرة ومكثفة — اختر مسار التعلم المناسب وابدأ الآن.</p>
+        <div class="controls">
+          <input id="search" type="search" placeholder="ابحث عن كورس أو موضوع...">
+          <select id="category">
+            <option value="all">كل الفئات</option>
+            <option value="programming">البرمجة</option>
+            <option value="design">التصميم</option>
+            <option value="marketing">التسويق</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="courses container">
+      <!-- Course cards injected by JS -->
+      <div id="coursesGrid" class="grid"></div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>من نحن</h2>
+      <p>نقدّم مجموعة من الدورات المصممة لتطوير مهاراتك العملية بسرعة وبأسلوب واضح. انضم الآن واستفد من الموارد والدعم المتواصل.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 منصة الكورسات — جميع الحقوق محفوظة</small>
+<a href="bad4.html">
+  <div class="buttons">
+    <button class="btn"><span></span><p data-start="good luck!" data-text="lats go!" data-title="comments"></p></button>
+</div>
+</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="bad3.js"></script>
+</body>
+</html>

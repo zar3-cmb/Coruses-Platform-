@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>تسجيل الدخول - كورسات</title>
+	<link rel="stylesheet" href="bad2.css">
+	<meta name="theme-color" content="#4b6cb7">
+</head>
+<body>
+	<div class="login-wrapper">
+		<form id="loginForm" class="login-card" novalidate>
+			<h1>تسجيل الدخول</h1>
+			<p class="sub">ادخل بياناتك للدخول إلى صفحة الكورسات</p>
+
+			<div class="field">
+				<label for="email">البريد الإلكتروني</label>
+				<input id="email" type="email" name="email" placeholder="name@example.com" required>
+			</div>
+
+			<div class="field">
+				<label for="password">كلمة المرور</label>
+				<input id="password" type="password" name="password" placeholder="●●●●●●" required minlength="4">
+			</div>
+
+			<div class="options">
+				<label class="remember"><input id="remember" type="checkbox"> تذكرني</label>
+				<a href="#" class="forgot">نسيت كلمة المرور؟</a>
+			</div>
+
+			<div class="error" id="error" aria-live="polite"></div>
+
+			<button type="submit" class="btn">دخول</button>
+
+			<p class="register">ليس لديك حساب؟ <a href="#">سجل الآن</a></p>
+		</form>
+	</div>
+
+	<script src="bad2.js"></script>
+</body>
+</html>
