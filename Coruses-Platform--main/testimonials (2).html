@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آراء المتعلمين - منصة الكورسات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+</head>
+<body>
+    <header>
+        <h1>آراء المتعلمين</h1>
+        <p>شارك تجربتك مع الكورسات واقرأ آراء المتعلمين الآخرين.</p>
+    </header>
+
+    <main class="container">
+        <section class="testimonial-stats">
+            <h2 id="reviewCount">آراء المتعلمين</h2>
+            <p class="storage-notice">تُحفظ الآراء على هذا الجهاز فقط، ولا تُرسل أو تُشارك مع أجهزة أخرى.</p>
+        </section>
+
+        <section class="comment-section" aria-labelledby="commentHeading">
+            <h2 id="commentHeading">أضف رأيك</h2>
+            <div id="signInPrompt" class="sign-in-prompt" hidden>
+                <p>سجّل الدخول أولًا لإضافة رأيك.</p>
+                <a class="submit-button" href="login.html">تسجيل الدخول</a>
+            </div>
+            <form id="commentForm" class="comment-form" hidden>
+                <p id="commentAuthor" class="comment-author"></p>
+                <div class="form-field">
+                    <label for="commentCourse">الكورس</label>
+                    <select id="commentCourse" required>
+                        <option value="">اختر الكورس</option>
+                        <option>مقدمة في البرمجة بلغة بايثون</option>
+                        <option>بناء واجهات احترافية بـ HTML/CSS</option>
+                        <option>JavaScript للمبتدئين</option>
+                        <option>تصميم تجربة المستخدم (UX)</option>
+                        <option>أساسيات التسويق الرقمي</option>
+                        <option>React عملي لتطبيقات الويب</option>
+                        <option>كورس آخر</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="commentRating">تقييمك</label>
+                    <select id="commentRating" required>
+                        <option value="5">5 — ممتاز</option>
+                        <option value="4">4 — جيد جدًا</option>
+                        <option value="3">3 — جيد</option>
+                        <option value="2">2 — مقبول</option>
+                        <option value="1">1 — يحتاج إلى تحسين</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="commentText">رأيك في الكورس</label>
+                    <textarea id="commentText" minlength="10" maxlength="1000" rows="5" required></textarea>
+                    <small>اكتب من 10 إلى 1000 حرف.</small>
+                </div>
+                <div id="commentMessage" class="form-message" aria-live="polite"></div>
+                <button class="submit-button" type="submit">نشر الرأي</button>
+            </form>
+        </section>
+
+        <section class="reviews-section" aria-labelledby="reviewsHeading">
+            <h2 id="reviewsHeading">آراء المتعلمين</h2>
+            <div class="testimonials-grid" id="testimonials-grid" aria-live="polite"></div>
+            <p id="emptyReviews" class="empty-reviews" hidden>لا توجد آراء بعد. كن أول من يشارك تجربته.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> منصة الكورسات التعليمية</p>
+    </footer>
+
+    <script src="js/testimonials.js"></script>
+</body>
+</html>

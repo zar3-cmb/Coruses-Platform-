@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.back {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #4040ff;
+}
+
+.top-back {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: clamp(2rem, 8vw, 6rem) 1.5rem;
+    text-align: center;
+}
+
+.top-back header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.top-back h1 {
+    max-width: 20ch;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.4;
+    animation: tinUpIn 1.2s ease both;
+}
+
+.button {
+    --main-size: 1.2rem;
+    --color-text: #ffffff;
+    --color-background: #ff135a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.25rem;
+    border: 0;
+    border-radius: 999px;
+    color: var(--color-text);
+    background: var(--color-background);
+    box-shadow: 0 0 0.2em var(--color-background);
+    font-size: var(--main-size);
+    font-weight: 600;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    box-shadow: 0 0 1em var(--color-background);
+    transform: translateY(-2px);
+}
+
+.button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+.button svg {
+    width: 1.3rem;
+    height: 1rem;
+    fill: currentColor;
+}
+
+.footer {
+    padding: 1.5rem;
+    text-align: center;
+    background: #333;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.social-links a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+.greeting-msg {
+    position: fixed;
+    z-index: 1000;
+    top: 1rem;
+    inset-inline-start: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.625rem;
+    color: #fff;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    box-shadow: 0 4px 12px #00000026;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.greeting-msg.show {
+    opacity: 1;
+}
+
+.course-counter {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.course-counter p {
+    margin: 0;
+}
+
+.course-counter #courseNum {
+    color: #ffcedc;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
