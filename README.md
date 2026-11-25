@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Coruses-Platform-
-for Coruses Platform project
-=======
 # منصة الكورسات التعليمية
 
 منصة تعليمية لعرض الكورسات مع backend لتسجيل الحسابات والدخول باستخدام SQLite.
